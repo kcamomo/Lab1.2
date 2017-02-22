@@ -14,7 +14,6 @@ public class cMain {
 			double expectedAveragePaybackReturn;
 			int timeToDraw; 
 			double expectedSSIincome;
-			double amountSavedMonthly;
 			double requiredIncome;
 			
 			System.out.print("Enter the number of years you want to work: ");
@@ -57,6 +56,8 @@ public class cMain {
 			double PV=FindPV(expectedAveragePaybackReturn/12, timeToDraw*12, expectedSSIincome-requiredIncome,0, false);
 			
 			System.out.println("You should save $"+ String.format("%.2f", -FindPMT(expectedAverageInvestmentReturn/12, yearsToWork*12, 0, PV, false)));
+			
+			input.close();
 	}
 	
 	
